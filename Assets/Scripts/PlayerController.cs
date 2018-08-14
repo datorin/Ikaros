@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, ITouchListener
 {
+	[SerializeField] private Sprite _circle;
+	[SerializeField] private Sprite _triangle;
+
+	private SpriteRenderer _sprite;
+	
 	private const float Speed = 20;
 	private const float HalfWidth = 0.25f;
 	private const float HalfLength = 0.25f;
@@ -19,6 +24,8 @@ public class PlayerController : MonoBehaviour, ITouchListener
 	private void Start()
 	{
 		TouchManager.AddDirectionListener(this);
+
+		_sprite = GetComponent<SpriteRenderer>();
 	}
 
 
@@ -27,14 +34,16 @@ public class PlayerController : MonoBehaviour, ITouchListener
 		if (!(_direction.magnitude > 0)) return;
 
 		transform.up = _direction;
+
+		_sprite.sprite = _triangle;
 		
 		if(!_isTouchEnded) return;
 		
 		var frameDistance = Speed * Time.fixedDeltaTime;
 		
-		CheckCollision(frameDistance);
-		
 		transform.Translate(Vector3.up * frameDistance);
+		
+		CheckCollision(frameDistance);
 	}
 
 	private void CheckCollision(float distance)
@@ -53,12 +62,14 @@ public class PlayerController : MonoBehaviour, ITouchListener
 		{
 			Bounce(righthit.point, _direction, righthit.normal);
 			_isColliding = true;
+			_sprite.sprite = _circle;
 		}
 
 		if (lefthit.collider != null && !_isColliding)
 		{
 			Bounce(lefthit.point, _direction, lefthit.normal);
 			_isColliding = true;
+			_sprite.sprite = _circle;
 		}
 	}
 	
