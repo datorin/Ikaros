@@ -9,7 +9,9 @@
           <e p="CameraController.cs" t="Include" />
           <e p="GameplayManager.cs" t="Include" />
           <e p="ITouchListener.cs" t="Include" />
+          <e p="MapGenerator.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="PrebuildedFences.cs" t="Include" />
           <e p="TouchController.cs" t="Include" />
           <e p="TouchManager.cs" t="Include" />
         </e>

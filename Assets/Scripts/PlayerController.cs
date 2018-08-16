@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour, ITouchListener
@@ -96,6 +97,11 @@ public class PlayerController : MonoBehaviour, ITouchListener
 		else
 		{
 			var nextCheckPoint = firstCheckPoint + GameplayManager.DistanceBetweeCheckPoints * checkPoints.Count;
+
+			if (transform.position.y <= checkPoints.Last() - 1)
+			{
+				Destroy(gameObject);
+			}
 
 			if (!(transform.position.y >= nextCheckPoint)) return;
 			GameplayManager.AddPassedCheckPoints(nextCheckPoint);
