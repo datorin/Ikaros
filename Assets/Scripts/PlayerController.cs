@@ -67,18 +67,32 @@ public class PlayerController : MonoBehaviour, ITouchListener
 		var righthit = Physics2D.Raycast(_rightPosition, _direction, distance);
 		var lefthit = Physics2D.Raycast(_leftPosition, _direction, distance);
 		
-		if (righthit.collider != null && !_isColliding)
+		if (righthit.collider != null)
 		{
-			Bounce(righthit.point, _direction, righthit.normal);
-			_isColliding = true;
-			_sprite.sprite = _circle;
+			if (righthit.normal.y == 1)
+			{
+				Destroy(gameObject);
+			}
+			if (!_isColliding)
+			{
+				Bounce(righthit.point, _direction, righthit.normal);
+				_isColliding = true;
+				_sprite.sprite = _circle;
+			}
 		}
 
-		if (lefthit.collider != null && !_isColliding)
+		if (lefthit.collider != null)
 		{
-			Bounce(lefthit.point, _direction, lefthit.normal);
-			_isColliding = true;
-			_sprite.sprite = _circle;
+			if (lefthit.normal.y == 1)
+			{
+				Destroy(gameObject);
+			}
+			if (!_isColliding)
+			{
+				Bounce(lefthit.point, _direction, lefthit.normal);
+				_isColliding = true;
+				_sprite.sprite = _circle;
+			}
 		}
 	}
 	
