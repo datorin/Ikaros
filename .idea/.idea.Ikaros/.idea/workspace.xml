@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlayerController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="465">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding>
                 <marker date="1534380830953" expanded="false" signature="6:78" ph="..." />
                 <marker date="1534380830953" expanded="true" signature="141:2987" ph="{...}" />
@@ -36,19 +36,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TouchController.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TouchController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/TouchController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding>
-                <marker date="1534380831019" expanded="false" signature="6:78" ph="..." />
-                <marker date="1534380831019" expanded="true" signature="125:1172" ph="{...}" />
-                <marker date="1534380831019" expanded="true" signature="277:1170" ph="{...}" />
-                <marker date="1534380831019" expanded="true" signature="329:718" ph="/* if (Input.touchCount &gt; 0) ... */" />
-                <marker date="1534380831019" expanded="true" signature="771:859" ph="{...}" />
-                <marker date="1534380831019" expanded="true" signature="908:1026" ph="{...}" />
-                <marker date="1534380831019" expanded="true" signature="1078:1167" ph="{...}" />
+                <marker date="1534382278585" expanded="true" signature="6:100" ph="..." />
+                <marker date="1534382278585" expanded="true" signature="147:1266" ph="{...}" />
+                <marker date="1534382278585" expanded="true" signature="345:1264" ph="{...}" />
+                <marker date="1534382278585" expanded="true" signature="423:812" ph="/* if (Input.touchCount &gt; 0) ... */" />
+                <marker date="1534382278585" expanded="true" signature="865:953" ph="{...}" />
+                <marker date="1534382278585" expanded="true" signature="1002:1120" ph="{...}" />
+                <marker date="1534382278585" expanded="true" signature="1172:1261" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -57,8 +57,8 @@
       <file leaf-file-name="CameraController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="195">
+              <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
               <folding>
                 <marker date="1534378494025" expanded="false" signature="6:78" ph="..." />
                 <marker date="1534378494025" expanded="true" signature="125:451" ph="{...}" />
@@ -97,9 +97,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameplayManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TouchController.cs" />
       </list>
     </option>
@@ -169,12 +169,12 @@
       <option name="presentableId" value="Default" />
       <updated>1534256037958</updated>
       <workItem from="1534256041759" duration="358000" />
-      <workItem from="1534378283336" duration="2546000" />
+      <workItem from="1534378283336" duration="3206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2904000" />
+    <option name="totallyTimeSpent" value="3564000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -258,8 +258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="195">
+          <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
           <folding>
             <marker date="1534378494025" expanded="false" signature="6:78" ph="..." />
             <marker date="1534378494025" expanded="true" signature="125:451" ph="{...}" />
@@ -268,26 +268,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TouchController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding>
-            <marker date="1534380831019" expanded="false" signature="6:78" ph="..." />
-            <marker date="1534380831019" expanded="true" signature="125:1172" ph="{...}" />
-            <marker date="1534380831019" expanded="true" signature="277:1170" ph="{...}" />
-            <marker date="1534380831019" expanded="true" signature="329:718" ph="/* if (Input.touchCount &gt; 0) ... */" />
-            <marker date="1534380831019" expanded="true" signature="771:859" ph="{...}" />
-            <marker date="1534380831019" expanded="true" signature="908:1026" ph="{...}" />
-            <marker date="1534380831019" expanded="true" signature="1078:1167" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="465">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding>
             <marker date="1534380830953" expanded="false" signature="6:78" ph="..." />
             <marker date="1534380830953" expanded="true" signature="141:2987" ph="{...}" />
@@ -303,6 +287,22 @@
             <marker date="1534380830953" expanded="true" signature="2816:2849" ph="{...}" />
             <marker date="1534380830953" expanded="true" signature="2892:2985" ph="{...}" />
             <marker date="1534380830953" expanded="true" signature="2952:2982" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TouchController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <marker date="1534382278585" expanded="true" signature="6:100" ph="..." />
+            <marker date="1534382278585" expanded="true" signature="147:1266" ph="{...}" />
+            <marker date="1534382278585" expanded="true" signature="345:1264" ph="{...}" />
+            <marker date="1534382278585" expanded="true" signature="423:812" ph="/* if (Input.touchCount &gt; 0) ... */" />
+            <marker date="1534382278585" expanded="true" signature="865:953" ph="{...}" />
+            <marker date="1534382278585" expanded="true" signature="1002:1120" ph="{...}" />
+            <marker date="1534382278585" expanded="true" signature="1172:1261" ph="{...}" />
           </folding>
         </state>
       </provider>

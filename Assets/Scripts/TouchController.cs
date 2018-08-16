@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TouchController : MonoBehaviour {
 	
@@ -9,10 +10,13 @@ public class TouchController : MonoBehaviour {
 	
 	private int _bullets;
 
+	[SerializeField] private Text _bulletsText;
+
 	// Update is called once per frame
 	private void Update () 
 	{
 		_bullets = GameplayManager.GetBullets();
+		_bulletsText.text = _bullets.ToString();
 		
 		/*if (Input.touchCount > 0)
 		{
