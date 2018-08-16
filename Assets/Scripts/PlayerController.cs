@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour, ITouchListener
 	
 	private Vector3 _direction;
 	private bool _isTouchEnded;
+	private bool _isShooted = false;
 	
 	private bool _isColliding;
 	
@@ -29,12 +30,13 @@ public class PlayerController : MonoBehaviour, ITouchListener
 	}
 
 
-	private void FixedUpdate () 
+	private void FixedUpdate ()
 	{
+		
 		if (!(_direction.magnitude > 0)) return;
 
 		transform.up = _direction;
-
+			
 		_sprite.sprite = _triangle;
 		
 		if(!_isTouchEnded) return;
@@ -44,6 +46,12 @@ public class PlayerController : MonoBehaviour, ITouchListener
 		transform.Translate(Vector3.up * frameDistance);
 		
 		CheckCollision(frameDistance);
+
+		CheckCheckPoints();
+
+		if (!_isShooted) return;
+		GameplayManager.RestBullet();
+		_isShooted = false;
 	}
 
 	private void CheckCollision(float distance)
@@ -73,6 +81,29 @@ public class PlayerController : MonoBehaviour, ITouchListener
 		}
 	}
 	
+	private void CheckCheckPoints()
+	{
+		var checkPoints = GameplayManager.GetPassedCheckPoints();
+		var firstCheckPoint = GameplayManager.FirstCheckPoint;
+
+		if (checkPoints.Count == 0)
+		{
+			if (!(transform.position.y >= firstCheckPoint)) return;
+			GameplayManager.AddPassedCheckPoints(firstCheckPoint);
+			Debug.Log("1");
+			GameplayManager.SumBullet();
+		}
+		else
+		{
+			var nextCheckPoint = firstCheckPoint + GameplayManager.DistanceBetweeCheckPoints * checkPoints.Count;
+
+			if (!(transform.position.y >= nextCheckPoint)) return;
+			GameplayManager.AddPassedCheckPoints(nextCheckPoint);
+			Debug.Log(GameplayManager.GetPassedCheckPoints().Count);
+			GameplayManager.SumBullet();
+		}
+	}
+	
 	private void Bounce(Vector3 startPosition, Vector3 direction, Vector3 normal)
 	{
 		var newDirection = Vector3.Reflect(direction, normal.normalized);
@@ -90,5 +121,10 @@ public class PlayerController : MonoBehaviour, ITouchListener
 	public void PassTouchEnded(bool isEnded)
 	{
 		_isTouchEnded = isEnded;
+
+		if (_isTouchEnded == true)
+		{
+			_isShooted = true;
+		}
 	}
 }
