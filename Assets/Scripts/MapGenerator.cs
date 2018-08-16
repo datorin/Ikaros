@@ -27,13 +27,16 @@ public class MapGenerator : MonoBehaviour
 		
 		for (var x = 1; x < 10; x++)
 		{
-			Instantiate(_baseSquare, new Vector3(x * 1 + XLeftWall, YWall, 0), Quaternion.identity);
+			var baseSquare = Instantiate(_baseSquare, new Vector3(x * 1 + XLeftWall, YWall, 0), Quaternion.identity);
+			baseSquare.transform.parent = transform;
 		}
 
 		for (var y = 0; y < Mathf.Abs(_firstFencePositionY - YWall); y++)
 		{
-			Instantiate(_wallSquare, new Vector3(XLeftWall, y * 1 + YWall, 0), Quaternion.identity);
-			Instantiate(_wallSquare, new Vector3(XRightWall, y * 1 + YWall, 0), Quaternion.identity);
+			var wallInstantiate1 = Instantiate(_wallSquare, new Vector3(XLeftWall, y * 1 + YWall, 0), Quaternion.identity);
+			wallInstantiate1.transform.parent = transform;
+			var wallInstantiate2 = Instantiate(_wallSquare, new Vector3(XRightWall, y * 1 + YWall, 0), Quaternion.identity);
+			wallInstantiate2.transform.parent = transform;
 		}
 		
 		for (var i = 0; i < FencesNumber; i++)
@@ -48,17 +51,17 @@ public class MapGenerator : MonoBehaviour
 			{
 				var block = CalculateGameObjectFromValue(fence[j]);
 
-				if (block != null)
-				{
-					Instantiate(block, new Vector3(j + XMargin, i * _distance + YMargin, 0),
-						Quaternion.identity);
-				}
+				if (block == null) continue;
+				var blockInstantiate = Instantiate(block, new Vector3(j + XMargin, i * _distance + YMargin, 0), Quaternion.identity);
+				blockInstantiate.transform.parent = transform;
 			}
 
 			for (var t = 0; t < _distance; t++)
 			{
-				Instantiate(_wallSquare, new Vector3(XLeftWall, t * 1 + i * _distance + _firstFencePositionY, 0), Quaternion.identity);
-				Instantiate(_wallSquare, new Vector3(XRightWall, t * 1 + i * _distance + _firstFencePositionY, 0), Quaternion.identity);
+				var wallInstantiate1 = Instantiate(_wallSquare, new Vector3(XLeftWall, t * 1 + i * _distance + _firstFencePositionY, 0), Quaternion.identity);
+				wallInstantiate1.transform.parent = transform;
+				var wallInstantiate2 = Instantiate(_wallSquare, new Vector3(XRightWall, t * 1 + i * _distance + _firstFencePositionY, 0), Quaternion.identity);
+				wallInstantiate2.transform.parent = transform;
 			}
 		}
 	}
