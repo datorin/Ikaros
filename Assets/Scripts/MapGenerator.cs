@@ -42,8 +42,6 @@ public class MapGenerator : MonoBehaviour
 		for (var i = 0; i < FencesNumber; i++)
 		{
 			var pointer = Random.Range(0, _fenceList.Count);
-			
-			Debug.Log(pointer);
 
 			var fence = _fenceList[pointer];
 

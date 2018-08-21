@@ -252,6 +252,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1342310174197700, guid: ea5358a959f5cae4eaa57fdcff697e78, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 66300994794126992, guid: ea5358a959f5cae4eaa57fdcff697e78,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 1c6fc3059f8aedd48abc5ffcd36cf59c, type: 2}
+    - target: {fileID: 50347715304239406, guid: ea5358a959f5cae4eaa57fdcff697e78,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 1c6fc3059f8aedd48abc5ffcd36cf59c, type: 2}
+    - target: {fileID: 66300994794126992, guid: ea5358a959f5cae4eaa57fdcff697e78,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5358a959f5cae4eaa57fdcff697e78, type: 2}
   m_IsPrefabParent: 0
@@ -294,6 +313,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4869906949604808, guid: ec4532715f36d0348ba8163433d0f8a8, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869906949604808, guid: ec4532715f36d0348ba8163433d0f8a8, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec4532715f36d0348ba8163433d0f8a8, type: 2}
   m_IsPrefabParent: 0
@@ -302,6 +329,26 @@ GameObject:
   m_PrefabParentObject: {fileID: 1079232165514674, guid: ec4532715f36d0348ba8163433d0f8a8,
     type: 2}
   m_PrefabInternal: {fileID: 598562473}
+--- !u!50 &935606698
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935606694}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!114 &1290228587 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114984845930075298, guid: 6ac1dcbd4e244c94c89723af7804cca2,
